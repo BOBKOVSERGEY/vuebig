@@ -11,10 +11,7 @@
 </head>
 <body>
 <div id="app">
-    <input type="text" v-model="text">
     {{title}}<br>
-
-    {{toLower}}
 
 </div>
 
@@ -23,13 +20,13 @@
     let app = new Vue({
         el: '#app',
         data: {
-            title: 'Vue init',
-            text: ''
+            title: 'Mounted & Created',
         },
-        computed: {
-            toLower () {
-                return this.text.toLowerCase();
-            }
+        created() {
+            alert('Created');
+        },
+        mounted() {
+            alert('Mounted');
         }
     })
 </script>
